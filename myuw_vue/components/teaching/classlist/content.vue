@@ -36,16 +36,18 @@
       <uw-tab
         title-item-class="text-nowrap myuw-text-md me-2 mb-1"
         title-link-class="rounded-0 px-2 py-1 h-100 text-body"
+        :title-item-icon="faTable"
+        title="Table"
         active
       >
-        <template #title> <font-awesome-icon :icon="faTable" /> Table </template>
         <uw-table-view :section="section" :show-joint-course-stud="showJointCourse" />
       </uw-tab>
       <uw-tab
         title-item-class="text-nowrap myuw-text-md me-2 mb-1"
         title-link-class="rounded-0 px-2 py-1 h-100 text-body"
+        :title-item-icon="faUserCircle"
+        title="Photo Grid"
       >
-        <template #title> <font-awesome-icon :icon="faUserCircle" /> Photo Grid </template>
         <uw-photo-list
           :registrations="section.registrations"
           :show-joint-course-stud="showJointCourse"
