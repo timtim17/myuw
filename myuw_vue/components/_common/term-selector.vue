@@ -14,12 +14,10 @@
     <uw-tab
       v-for="(tab, i) in displayedTabs"
       :key="i"
+      :title="tab.quarter + (tab.year % 100)"
       title-item-class="text-nowrap myuw-text-lg me-2 mb-1"
       title-link-class="rounded-0 px-2 py-1 h-100 text-body"
     >
-      <template #title>
-        {{ tab.quarter }} '{{ tab.year % 100 }}
-      </template>
       <slot :tab="tab" />
     </uw-tab>
     <uw-tab
